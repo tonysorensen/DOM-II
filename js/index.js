@@ -13,7 +13,18 @@ const body = document.querySelector("body");
 
 body.addEventListener("click", () => {
   body.style.backgroundColor = "yellow";
+  
+  
 });
+
+const button = document.querySelector('.content-pick')
+button.addEventListener("click", () => {
+   button.style.backgroundColor = "red";
+   event.stopPropagation();
+})
+
+
+
 
 const links = document.querySelectorAll("a");
 links.forEach((links) => {
@@ -30,21 +41,30 @@ img.forEach((img) => {
     })
 })
 
+window.addEventListener('load', () => {
+    alert('Page has finished loading.')
+})
 
 
+const head = document.querySelector('.main-navigation')
+body.addEventListener('keydown', () => {
+    head.style.backgroundColor = "red";
+    
+})
+
+body.addEventListener("wheel", () => {
+    body.style.backgroundColor = "green"
+})
 
 
+const foot = document.querySelector('footer')
+    foot.addEventListener('dblclick', (event) => {
+       foot.style.backgroundColor = "purple"
+})
+
+//resize
+window.addEventListener('resize', () => {
+    alert('You have resized the window')
+});
 
 
-
-    // let scale = 1;
-//     img.addEventListener("wheel", () => {
-//         //this prevents the wheel from scrolling the page when it is centered on the image
-//         event.preventDefault();
-//         //this sets the min and max of the image size
-//         scale = Math.min(Math.max(.125, scale), .947);
-//         //this sets the sensitivity of the scroll wheel
-//         scale += event.deltaY * .001;
-// img.style.transform = `scale(${scale})`;
-//     } )
-// })
