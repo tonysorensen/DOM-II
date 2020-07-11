@@ -1,4 +1,6 @@
 // Your code goes here
+
+// 1 & 2 mouse enter and leave
 const subhead = document.querySelectorAll("h2");
 subhead.forEach((subhead) => {
   subhead.addEventListener("mouseenter", () => {
@@ -9,6 +11,7 @@ subhead.forEach((subhead) => {
   });
 });
 
+// 3 mouse click & stop propagatiion
 const body = document.querySelector("body");
 
 body.addEventListener("click", () => {
@@ -23,17 +26,23 @@ button.addEventListener("click", () => {
    event.stopPropagation();
 })
 
+// 4 double click
+const foot = document.querySelector('footer')
+    foot.addEventListener('dblclick', (event) => {
+       foot.style.backgroundColor = "purple"
+})
 
-
-
+// 5 mouseover
 const links = document.querySelectorAll("a");
 links.forEach((links) => {
   links.addEventListener("mouseover", () => {
     links.style.color = "blue";
     links.style.fontSize = "2.5em";
+    event.preventDefault();
   });
 });
 
+// 6 right mouse click
 const img = document.querySelectorAll('img')
 img.forEach((img) => { 
     img.addEventListener('contextmenu', ()=> {
@@ -41,28 +50,24 @@ img.forEach((img) => {
     })
 })
 
+//7 on page load
 window.addEventListener('load', () => {
     alert('Page has finished loading.')
 })
 
-
+// 8 keydown
 const head = document.querySelector('.main-navigation')
 body.addEventListener('keydown', () => {
     head.style.backgroundColor = "red";
     
 })
 
+// 9 scroll wheel
 body.addEventListener("wheel", () => {
     body.style.backgroundColor = "green"
 })
 
-
-const foot = document.querySelector('footer')
-    foot.addEventListener('dblclick', (event) => {
-       foot.style.backgroundColor = "purple"
-})
-
-//resize
+// 10 resize window
 window.addEventListener('resize', () => {
     alert('You have resized the window')
 });
