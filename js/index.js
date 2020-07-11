@@ -1,13 +1,16 @@
 // Your code goes here
-const image = document.getElementsByTagName('img')
-image[0].addEventListener('mouseenter', () => {
-    image[0].style.transform = 'scale(1.15)'
+const subhead = document.querySelectorAll('h2')
+subhead.forEach(subhead => {
+    subhead.addEventListener('mouseenter', (event) => {
+        subhead.style.transform = 'scale(1.25)'
+    subhead.addEventListener('mouseleave', () => {
+        subhead.style.transform = 'scale(1)'
+        
+})
+    })
+
 })
 
-
-image[0].addEventListener('mouseleave', () => {
-    image[0].style.transform = 'scale(1)'
-})
 
 
 const body = document.querySelector('body')
